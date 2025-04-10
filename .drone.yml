@@ -1,10 +1,6 @@
-kind: pipeline
-type: docker
-name: default
-
-steps:
-- name: greeting
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
+pipeline:
+  ndde:
+    image: node:8.3.0
+    commands:
+        -yarn install
+        -yarn test
